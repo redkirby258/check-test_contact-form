@@ -10,4 +10,13 @@ class ContactController extends Controller
   {
     return view('index');
   }
+  public function confirm(Request $request){
+    $contact = $request->only(['last-name','address', 'email', 'tel-first','tel-second','tel-third', 'detail','first-name','building','gender','content']);
+    return view('confirm', ['contact' => $contact]);
+  }
+  public function store()
+  {
+    $contact = $request->only(['last-name','first-name', 'email', 'tel-first','tel-second','tel-third', 'detail','building','gender','content','address']);
+ 
+  }
 }

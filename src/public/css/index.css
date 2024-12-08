@@ -1,5 +1,6 @@
 .header {
-    background: #000;
+    background: #fff;
+    border-bottom: #ff0000;
   }
   
   .header__inner {
@@ -11,6 +12,8 @@
   .header__logo {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     font-size: 24px;
   }
@@ -41,9 +44,7 @@
   .form__label--required {
     margin-left: 5px;
     padding: 4px 6px;
-    border-radius: 3px;
-    background: #fafafa;
-    color: #aaa;
+    color: #ff0000;
   }
   
   .form__error {
@@ -51,17 +52,34 @@
     color: #ff0000;
     text-align: left;
   }
-  
   .form__input--text input,
   .form__input--textarea textarea {
     padding: 10px;
-    width: 600px;
+    width: 500px;
     border: 1px solid #ddd;
     border-radius: 3px;
   
     appearance: none;
   }
-  
+  .form__input--text-name{
+    display: flex;
+    justify-content: space-between;
+    margin: o 3px 0 0;
+    padding-left: 10px;
+    width: auto;
+  }
+  .form__group-titile-definitionterm{
+    display: flex;
+  }
+  .form__input--text-name > div{
+    margin: 0 10px 0 0;
+  }
+
+.form__input--text-last-name,
+.form__input--text-first-name{
+    width: 20px;
+  }
+
   .form__input--text input {
     height: 40px;
   }
