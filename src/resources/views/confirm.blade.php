@@ -31,19 +31,19 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お名前</th>
               <td class="confirm-table__text">
-                <input type="text" name="name" value="サンプルテキスト" />
+              {{ $contact['last-name'] .  $contact['first-name']}}
               </td>
             </tr>
             <tr class="confirm-table__row">
               <th class="confirm-table__header">性別</th>
               <td class="confirm-table__text">
-                <input type="email" name="gender" value="サンプルテキスト" />
+              {{ $contact['gender'] }}
               </td>
             </tr>
             <tr class="confirm-table__row">
               <th class="confirm-table__header">メールアドレス</th>
               <td class="confirm-table__text">
-                <input type="email" name="email" value="サンプルテキスト" />
+              {{ $contact['email'] }}
               </td>
             </tr>
             <tr class="confirm-table__row">
@@ -55,24 +55,24 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">住所</th>
               <td class="confirm-table__text">
-                <input type="email" name="email" value="サンプルテキスト" />
+              {{ $contact['address'] }}
               </td>
             <tr class="confirm-table__row">
               <th class="confirm-table__header">建物名</th>
               <td class="confirm-table__text">
-                <input type="email" name="email" value="サンプルテキスト" />
+              {{ $contact['building'] }}
               </td>
             </tr>
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">お問い合わせの種類/th>
+              <th class="confirm-table__header">お問い合わせの種類</th>
               <td class="confirm-table__text">
-                <input type="email" name="email" value="サンプルテキスト" />
+              {{ $contact['content'] }}
               </td>
             </tr>
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お問い合わせ内容</th>
               <td class="confirm-table__text">
-                <input type="text" name="content" value="サンプルテキスト" />
+              {{ $contact['detail'] }}
               </td>
             </tr>
           </table>

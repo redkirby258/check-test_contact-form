@@ -1,5 +1,5 @@
 .header {
-    background: #fff;
+    background: #000;
     border-bottom: #ff0000;
   }
   
@@ -10,7 +10,7 @@
   }
   
   .header__logo {
-    color: #fff;
+    color: #f0ff00;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -71,15 +71,15 @@
   .form__group-titile-definitionterm{
     display: flex;
   }
-  .form__input--text-name > div{
-    margin: 0 10px 0 0;
-  }
 
 .form__input--text-last-name,
 .form__input--text-first-name{
     width: 20px;
   }
 
+  .form__input--radio{
+    text-align: right;
+  }
   .form__input--text input {
     height: 40px;
   }

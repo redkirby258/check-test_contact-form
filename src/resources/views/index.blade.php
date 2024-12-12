@@ -8,6 +8,7 @@
   <title>FashionablyLate</title>
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                     <div class="form__input--text">
                         <dd class="form__input--text-name">
                             <div class="form__input--text-last-name">
-                                <input type="text" name="last-name" value="{{ $contact['last-name'] }}" readonly  placeholder="例&colon;山田" />
+                                <input type="text" name="last-name"  placeholder="例&colon;山田" />
                             </div>
                             <div class="form__input--text-first-name">
                                 <input type="text" name="first-name" placeholder="例&colon;太郎" />
@@ -45,7 +46,7 @@
                         </dd>
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                    
                     </div>
                 </div>
             </div>
@@ -55,27 +56,27 @@
                     <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
-                    <div class="form__input--text">
-                        <input type="radio" name="gender" />男性
-                        <input type="radio" name="gender" />女性
-                        <input type="radio" name="gender" />その他
+                    <div class="form__input--radio">
+                        <input type="radio" name="gender" value="男性"/>男性
+                        <input type="radio" name="gender" value="女性"/>女性
+                        <input type="radio" name="gender" value="その他"/>その他
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                    
                     </div>
                 </div>
             </div>
             <div class="form__group">
                 <div class="form__group-title">
                     <span class="form__label--item">メールアドレス</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="email" name="email" value="{{ $contact['email'] }}" readonly  placeholder="test@example.com" />
+                        <input type="email" name="email" placeholder="test@example.com" />
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                    
                     </div>
                 </div>
             </div>
@@ -86,19 +87,19 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="tel" name="tel-first" value="{{ $contact['tel-first'] }}" readonly  placeholder="080" />
+                        <input type="tel" name="tel-first"  placeholder="080" />
                     </div>
                         <p class="form__input--text-item">
                             -
                         </p>
                     <div class="form__input--text">
-                        <input type="tel" name="tel-second" value="{{ $contact['tel-second'] }}" readonly  placeholder="1234" />
+                        <input type="tel" name="tel-second"  placeholder="1234" />
                     </div>
                         <p class="form__input--text-item">
                             -
                         </p>
                     <div class="form__input--text">
-                        <input type="tel" name="tel-third" value="{{ $contact['tel-third'] }}" readonly  placeholder="5678" />
+                        <input type="tel" name="tel-third"   placeholder="5678" />
                     </div>
                     <div class="form__error">
                         <!--バリデーション機能を実装したら記述します。-->
@@ -112,10 +113,10 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="text" name="building" value="{{ $contact['address'] }}" readonly  placeholder="例:千駄ヶ谷マンション101" />
+                        <input type="text" name="address"  placeholder="例:千駄ヶ谷マンション101" />
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                    
                     </div>
                 </div>
             </div>
@@ -125,21 +126,22 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="text" name="building" value="{{ $contact['building'] }}" readonly  placeholder="例:千駄ヶ谷マンション101" />
-                    </div>
-                    <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                        <input type="text" name="building"  placeholder="例:千駄ヶ谷マンション101" />
                     </div>
                 </div>
-            </div>
             <div class="form__group">
                 <div class="form__group-title">
                     <span class="form__label--item">お問い合わせの種類</span>
                     <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
-                    <div class="form__input--textarea">
-                        <textarea name="content-kinds" value="{{ $contact['content-kinds'] }}" readonly placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    <div class="form__input--select">
+                        <select class="" name="content"  placeholder="お問い合わせ内容をご記入ください">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form__error">
+                    
                     </div>
                 </div>
             </div>
@@ -150,7 +152,10 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--textarea">
-                        <textarea name="content" value="{{ $contact['content'] }}" readonly placeholder="お問い合わせ内容をご記入ください"></textarea>
+                        <textarea name="detail"  placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </div>
+                    <div class="form__error">
+                    
                     </div>
                 </div>
             </div>
